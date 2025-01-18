@@ -1,62 +1,66 @@
+// File: AK/www/index.html
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Serenity WebServer Start Page!</title>
+<html>
+<head>
+    <title>Welcome to SerenityOS - IOE Pulchowk Edition</title>
     <style>
-      body {
-        font-size: 16px;
-        line-height: 1.6;
-        background: #ababab;
-      }
-
-      main {
-        background: #ffffff;
-        width: 500px;
-        border: 1px solid #000000;
-        padding: 10px;
-        margin: 0 auto;
-      }
-
-      header {
-        text-align: center;
-      }
-
-      .banner {
-        background: #ababab;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-        padding: 5px 0;
-      }
-
-      .banner.it-works {
-        background: #ab6e4aff;
-      }
-
-      section {
-        margin: 5px 0;
-      }
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        .header {
+            text-align: center;
+            color: #2f3640;
+            margin-bottom: 30px;
+        }
+        .content {
+            line-height: 1.6;
+            color: #353b48;
+        }
+        .features {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
     </style>
-  </head>
-
-  <body>
-    <main>
-      <header>
-        <img src="ladyball.png" />
-        <h1>Serenity WebServer Start Page!</h1>
-      </header>
-      <p class="banner it-works">It works!</p>
-      <hr />
-      <section>
-        <p class="banner">Congratulations!</p>
-        <p>
-          If you are reading this in a browser, I think we may have succeeded!
-          Unless of course you just loaded the local file in your browser
-          (cheater!) :^)
+</head>
+<body>
+    <div class="header">
+      <img src="Pulchowk-Campus.png" />
+        <h1>Welcome to SerenityOS</h1>
+        <h2>IOE Pulchowk Campus Edition</h2>
+    </div>
+    
+    <div class="content">
+        <p>Welcome to the Computer Engineering Edition of SerenityOS!</p>
+        
+        <div class="features">
+            <h3>About This Build</h3>
+            <ul>
+                <li>Created by Computer Engineering Students of IOE Pulchowk Campus</li>
+                <li>Operating Systems Project Implementation</li>
+                <li>Department of Computer Engineering</li>
+            </ul>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li>Custom-built for engineering excellence</li>
+                <li>Enhanced for educational purposes</li>
+                <li>Open-source development platform</li>
+            </ul>
+        </div>
+        
+        <p>Feel free to explore the system and its features. This custom build demonstrates our understanding of operating system principles and software engineering practices.</p>
+        
+        <p style="text-align: center; margin-top: 30px;">
+            Made with ♥ by CE Students<br>
+            IOE Pulchowk Campus
         </p>
-        <p>Try this <a href="other.html">link</a> to another page!</p>
-      </section>
-    </main>
-  </body>
+    </div>
+</body>
 </html>

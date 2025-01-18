@@ -1,5 +1,6 @@
 #!sh
 
+# Standard SerenityOS aliases
 alias fm=FileManager
 alias mag=Magnifier
 alias sh=Shell
@@ -23,21 +24,60 @@ alias fe=FontEditor
 alias ss=Spreadsheet
 alias vp=VideoPlayer
 
-alias ll='ls -l'
-alias poweroff='shutdown'
+# Custom IOE Pulchowk Campus student aliases
+alias ioe='echo "IOE Pulchowk Campus - Computer Engineering"'
+alias semdir='mkdir sem1 sem2 sem3 sem4 sem5 sem6 sem7 sem8'
+alias labwork='mkdir programs reports assignments'
+alias notes='te ~/Documents/engineering_notes.txt'
+alias compiler='cd ~/Projects/compiler_design'
+alias os='cd ~/Projects/operating_systems'
+alias ai='cd ~/Projects/artificial_intelligence'
 
+# Enhanced ls aliases
+alias ll='ls -l'
+alias la='ls -la'
+alias lh='ls -lh'
+alias cls='clear && ls'
+
+# Quick navigation
+alias cdp='cd ~/Projects'
+alias cdd='cd ~/Documents'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# System aliases
+alias poweroff='shutdown'
+alias mem='sm'  # Quick system monitor
+alias netstat='sm --network'
+alias cpu='sm --cpu'
+
+# Custom welcome message
+alias welcome='echo "Welcome to SerenityOS - IOE Pulchowk Campus Edition"'
+
+# Set prompt color based on user
 if [ "$(id -u)" = "0" ] {
-    prompt_color=31
+    prompt_color=31  # Red for root
 } else {
-    prompt_color=32
+    prompt_color=32  # Green for regular user
 }
 
-export PROMPT="\\X\\u@\\h:\\w\\a\\e[$prompt_color;1m\\h\\e[0m:\\e[34;1m\\w\\e[0m \\p "
+# Custom prompt with engineering theme
+export PROMPT="\\X\\e[33;1m[IOE]\\e[0m \\u@\\h:\\w\\a\\e[$prompt_color;1m\\h\\e[0m:\\e[34;1m\\w\\e[0m \\p "
 
+# Environment variables
 export HISTORY_AUTOSAVE_TIME_MS=10000
-
 export TMPDIR=/tmp
+export COLLEGE="IOE_PULCHOWK"
+export DEPARTMENT="COMPUTER"
+export PROJECT_DIR="$HOME/Projects"
 
+# Programs allowed to modify default termios
 PROGRAMS_ALLOWED_TO_MODIFY_DEFAULT_TERMIOS=(stty)
 
-for /usr/share/shell/completion/*.sh { source $it }
+# Load shell completions
+for /usr/share/shell/completion/*.sh {
+    source $it
+}
+
+# Display welcome message on startup
+welcome Pulchowk

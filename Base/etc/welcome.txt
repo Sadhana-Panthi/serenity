@@ -1,0 +1,10 @@
+=================================================
+     Welcome to SerenityOS - IOE Pulchowk Edition     
+=================================================
+Project By:
+- Computer Engineering Students
+- IOE Pulchowk Campus
+- Operating Systems Course Project
+-------------------------------------------------
+Type 'help' for available commands
+=================================================
