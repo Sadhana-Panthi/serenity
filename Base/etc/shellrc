@@ -56,13 +56,13 @@ alias welcome='echo "Welcome to SerenityOS - IOE Pulchowk Campus Edition"'
 
 # Set prompt color based on user
 if [ "$(id -u)" = "0" ] {
-    prompt_color=31  # Red for root
+    prompt_color=31
 } else {
-    prompt_color=32  # Green for regular user
+    prompt_color=32
 }
 
 # Custom prompt with engineering theme
-export PROMPT="\\X\\e[33;1m[IOE]\\e[0m \\u@\\h:\\w\\a\\e[$prompt_color;1m\\h\\e[0m:\\e[34;1m\\w\\e[0m \\p "
+export PROMPT="\e[33;1m[IOE]\e[0m \u@\h:\w \e[$prompt_color;1m\\h\e[0m:\e[34;1m\\w\e[0m \\p "
 
 # Environment variables
 export HISTORY_AUTOSAVE_TIME_MS=10000
@@ -75,9 +75,7 @@ export PROJECT_DIR="$HOME/Projects"
 PROGRAMS_ALLOWED_TO_MODIFY_DEFAULT_TERMIOS=(stty)
 
 # Load shell completions
-for /usr/share/shell/completion/*.sh {
-    source $it
-}
+for /usr/share/shell/completion/*.sh { source $it }
 
 # Display welcome message on startup
-welcome Pulchowk
+welcome
