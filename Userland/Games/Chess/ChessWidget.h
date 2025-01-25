@@ -170,6 +170,7 @@ private:
     bool check_game_over(ClaimDrawBehavior);
     void check_resign_on_time(StringView msg);
     void apply_increment(Chess::Move move);
+    void set_custom_label_text(String text);
 
     Chess::Board m_board;
     Chess::Board m_board_playback;
@@ -203,6 +204,8 @@ private:
     i32 m_white_time_elapsed { 0 };
     i32 m_black_time_elapsed { 0 };
     RefPtr<Core::Timer> m_timer;
+    RefPtr<GUI::Label> m_custom_label;
+
 };
 
 }

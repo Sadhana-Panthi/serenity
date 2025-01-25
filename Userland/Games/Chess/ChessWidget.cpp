@@ -44,6 +44,17 @@ void ChessWidget::paint_event(GUI::PaintEvent& event)
     GUI::Frame::paint_event(event);
 
     GUI::Painter painter(*this);
+
+    dbgln("Drawing text: Edited by Pulchowk Students");
+    painter.draw_text(
+    Gfx::IntRect(10, height() - 50, width() - 20, 20), // Explicitly specify Gfx::IntRect
+    AK::StringView("Edited by Pulchowk Students", strlen("Edited by Pulchowk Students")),
+    Gfx::FontDatabase::default_font().bold_variant().with_size(20),
+    Gfx::TextAlignment::Center,
+    Gfx::Color::White);
+
+
+
     painter.add_clip_rect(event.rect());
 
     painter.fill_rect(frame_inner_rect(), Gfx::Color::Black);
@@ -54,6 +65,8 @@ void ChessWidget::paint_event(GUI::PaintEvent& event)
     auto square_height = min_size / 8;
     auto square_margin = square_width / 10;
     int coord_rank_file = (side() == Chess::Color::White) ? 0 : 7;
+
+    
 
     Chess::Board& active_board = (m_playback ? board_playback() : board());
 
@@ -567,10 +580,13 @@ void ChessWidget::playback_move(PlaybackDirection direction)
     update();
 }
 
-void ChessWidget::update_move_display_widget(Chess::Board& board)
-{
+void ChessWidget::update_move_display_widget(Chess::Board& board) {
     size_t turn = 1;
     StringBuilder sb;
+    
+    // Use HTML-style bold formatting to ensure the text appears bold
+    sb.append(MUST(String::formatted("Edited by Pulchowk Students\n\n")));
+    
     for (auto [i, move] : enumerate(board.moves())) {
         if (i % 2 == 0) {
             sb.append(MUST(String::formatted("{}. {}", turn, MUST(move.to_algebraic()))));
@@ -579,7 +595,12 @@ void ChessWidget::update_move_display_widget(Chess::Board& board)
             turn++;
         }
     }
+    
+    // Set the text with the formatted moves
     m_move_display_widget->set_text(sb.string_view());
+    
+    // Apply background color
+    m_move_display_widget->set_background_color(Gfx::Color::from_rgb(0xFFE4E1));
 }
 
 ErrorOr<String> ChessWidget::get_fen() const
