@@ -52,31 +52,24 @@ Follow these steps to build and run this fork of SerenityOS:
    git clone https://github.com/sadhanapanthi/serenity.git
    cd serenity
 ```
+
 2. Run the build setup script
 
-
 ```sh
-Copy
-Edit
-./Meta/serenity.sh rebuild-toolchain
+   ./Meta/serenity.sh rebuild-toolchain
 ```
+
 
 3. Build SerenityOS:
 
 ```sh
-Copy
-Edit
-./Meta/serenity.sh build
-
+   ./Meta/serenity.sh build
 ```
+
 4. Run the OS:
 
 ```sh
-Copy
-Edit
 ./Meta/serenity.sh run
-
-
 ```
 
 ## 📂 File Changes Overview
@@ -85,13 +78,13 @@ Edit
 #### Chess Game:
 - `Userland/Games/Chess/ChessWidget.cpp`
 - `Base/res/icons/pulchowk_logo.png`
-- `Base/res/man/man6/Chess.md`
+- `Base/usr/share/man/man6/Chess.md`
 
 #### Terminal:
-- `Userland/Utilities/Terminal.cpp`
+- `Base/etc/shellrc`
 
 #### Web Links:
-- `Base/res/man/man6/*.md`
+- `Base/www/index.html`
 
 ### Added Files:
 - Pulchowk Campus logo: `Base/res/icons/pulchowk.jpg`
