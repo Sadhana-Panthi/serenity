@@ -14,10 +14,11 @@ Welcome to my customized fork of SerenityOS! 🎉 SerenityOS is a Unix-like oper
 
 
 
-## Screenshot
+## Screenshots
 
 <img src="ss/ss1.png" alt="first image" width="400"> <img src="ss/ss2.png" alt="second image" width="400"> 
-<img src="ss/ss3.png" alt="third image" width="400"> <img src="ss/ss4.png" alt="fourth image" width="400"> 
+<img src="ss/ss3.png" alt="third image" width="400"> <img src="ss/ss4.png" alt="fourth image" width="400">
+<img src="ss/aurora.png" alt="fourth image" width="400"> 
 
 ## 🛠️ Key Customizations
 
@@ -34,8 +35,14 @@ Welcome to my customized fork of SerenityOS! 🎉 SerenityOS is a Unix-like oper
 - **UI Improvements**:
   - Background color updated to a light pink for a fresh look.
   - Styled move history display for clarity and accessibility.
-
-### 3. **Web Links Customization**
+    
+### 3. **New Theme: Aurora**
+- **Aurora Theme**:
+  - Introduced a new **Aurora** theme, designed with a gradient effect inspired by northern lights.
+  - Aurora theme customization available under settings to toggle between default and Aurora for enhanced personalization.
+  - Includes new font styles and icons for a more modern look.
+    
+### 4. **Web Links Customization**
 - Updated web links in the Help section to include:
   - SerenityOS official documentation.
   - Chess resources for beginners and advanced players.
