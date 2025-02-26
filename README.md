@@ -87,6 +87,10 @@ Follow these steps to build and run this fork of SerenityOS:
 - `Base/res/icons/pulchowk_logo.png`
 - `Base/usr/share/man/man6/Chess.md`
 
+#### Theme addition:
+- `Base/res/themes/Aurora.ini`
+- `Base/res/wallpapers/aurora.png`
+
 #### Terminal:
 - `Base/etc/shellrc`
 
